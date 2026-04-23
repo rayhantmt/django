@@ -130,3 +130,13 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ],
 }
+# Tell Django to use your custom user model instead of the default one
+#AUTH_USER_MODEL = 'api.CustomUser'
+
+# Media files — where uploaded images are stored
+import os
+MEDIA_URL  = '/media/'                      # URL prefix for media files
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # Physical folder on disk
+
+# Install Pillow support (required for ImageField)
+# run: pip install Pillow
